@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <title>DBD Trivia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/questions.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="score">
+            0
+        </div>
+        <div id="question-container" class="section vertical-align">
+            <div id="question">
+                
+            </div>
+            <div id="smallprint">
+                
+            </div>
+        </div>
+        <div id="answers" class="section">
+            <button class="answer" onclick="chooseAnswer(0)">
+                
+            </button>
+            <button class="answer" onclick="chooseAnswer(1)">
+                
+            </button>
+            <button class="answer" onclick="chooseAnswer(2)">
+                
+            </button>
+            <button class="answer" onclick="chooseAnswer(3)">
+                
+            </button>
+        </div>
+        <div id="result-container" class="section vertical-align" style="display: none;">
+            <div id="result">
+                Entity Displeased
+            </div>
+        </div>
+        <button id="play-again" onclick="restart()" style="display: none;">
+            Play Again
+        </button>
+    </div>
+    <div id="top">
+        <div id="title">
+            Dead by Daylight Trivia
+        </div>
+        <div id="footnote">
+            Created by Morgan Hall
+        </div>
+    </div>
+    <div id="patch">
+        Updated to Patch 5.5.1
+    </div>
+</body>
+</html>
