@@ -294,6 +294,12 @@ var questions = [
         "type": "number",
         "suffix": "m"
       },
+      "aura_duration": {
+        "hasQuestion": true,
+        "question": "What is the duration of the aura reading effect of the perk _?",
+        "type": "number",
+        "suffix": "s"
+      },
       "duration": {
         "hasQuestion": true,
         "question": "What is the duration of the perk _?",
@@ -316,6 +322,10 @@ var questions = [
           "variance": 5,
           "min": 25,
           "max": 45
+        },
+        "range": {
+          "value": 36,
+          "variance": 4
         }
       },
       {
@@ -326,6 +336,16 @@ var questions = [
           "variance": 5,
           "min": 25,
           "max": 45
+        },
+        "range": {
+          "value": 4,
+          "variance": 2,
+          "min": 2
+        },
+        "action_bonus": {
+          "value": 15,
+          "variance": 5,
+          "min": 5
         }
       },
       {
@@ -340,6 +360,11 @@ var questions = [
         "action_bonus": {
           "value": 25,
           "variance": 5
+        },
+        "range": {
+          "value": 8,
+          "variance": 4,
+          "min": 4
         }
       },
       {
@@ -717,7 +742,7 @@ var questions = [
           "min": 25,
           "max": 45
         },
-        "duration": {
+        "aura_duration": {
           "value": 5,
           "variance": 1
         }
@@ -845,7 +870,7 @@ var questions = [
           "min": 25,
           "max": 45
         },
-        "duration": {
+        "aura_duration": {
           "value": 10,
           "variance": 2
         },
@@ -963,7 +988,7 @@ var questions = [
           "min": 25,
           "max": 45
         },
-        "duration": {
+        "aura_duration": {
           "value": 6,
           "variance": 1
         }
@@ -977,7 +1002,7 @@ var questions = [
           "min": 25,
           "max": 45
         },
-        "duration": {
+        "aura_duration": {
           "value": 6,
           "variance": 1
         }
@@ -991,7 +1016,7 @@ var questions = [
           "min": 25,
           "max": 45
         },
-        "duration": {
+        "aura_duration": {
           "value": 10,
           "variance": 2
         },
@@ -1058,7 +1083,7 @@ var questions = [
           "min": 25,
           "max": 45
         },
-        "duration": {
+        "aura_duration": {
           "value": 10,
           "variance": 2
         },
@@ -1389,7 +1414,7 @@ var questions = [
           "value": 20,
           "variance": 5
         },
-        "duration": {
+        "aura_duration": {
           "value": 4,
           "variance": 1
         }
@@ -2589,6 +2614,1340 @@ var questions = [
       }
     ]
   },
+  // KILLER PERKS
+  {
+    "info": {
+      "name": {
+        "hasQuestion": false
+      },
+      "killer": {
+        "hasQuestion": true,
+        "question": "Which killer does the teachable perk _ belong to?"
+      },
+      "level": {
+        "hasQuestion": true,
+        "question": "At what level is the teachable perk _ unlocked?",
+        "inverseQuestion": "Which of the following teachable perks is unlocked at level _?",
+        "type": "number",
+        "prefix": "Level "
+      },
+      "exhaustion": {
+        "hasQuestion": true,
+        "question": "The perk _ inflicts the Exhaustion status effect for how long?",
+        "type": "number",
+        "suffix": "s"
+      },
+      "broken": {
+        "hasQuestion": true,
+        "question": "The perk _ inflicts the Broken status effect for how long?",
+        "type": "number",
+        "suffix": "s"
+      },
+      "undetectable": {
+        "hasQuestion": true,
+        "question": "The perk _ grants the Undetectable status effect for how long?",
+        "type": "number",
+        "suffix": "s"
+      },
+      "exposed": {
+        "hasQuestion": true,
+        "question": "The perk _ inflicts the Exposed status effect for how long?",
+        "type": "number",
+        "suffix": "s"
+      },
+      "oblivious": {
+        "hasQuestion": true,
+        "question": "The perk _ inflicts the Oblivious status effect for how long?",
+        "type": "number",
+        "suffix": "s"
+      },
+      "incapacitated": {
+        "hasQuestion": true,
+        "question": "The perk _ inflicts the Incapacitated status effect for how long?",
+        "type": "number",
+        "suffix": "s"
+      },
+      "cooldown": {
+        "hasQuestion": true,
+        "question": "How long is the cooldown for the perk _?",
+        "type": "number",
+        "suffix": "s"
+      },
+      "movement_bonus": {
+        "hasQuestion": true,
+        "question": "By how much does the perk _ increase movement speed?",
+        "smallprint": "If based on stacks, give the value per stack",
+        "type": "number",
+        "prefix": "+",
+        "suffix": "%"
+      },
+      "movement_bonus_duration": {
+        "hasQuestion": true,
+        "question": "How long does the perk _ increase movement speed?",
+        "type": "number",
+        "suffix": "s"
+      },
+      "action_bonus": {
+        "hasQuestion": true,
+        "question": "What effect does the perk _ have on its associated action speed?",
+        "smallprint": "If based on stacks, give the value per stack",
+        "type": "number",
+        "prefix": "+",
+        "suffix": "%"
+      },
+      "action_duration": {
+        "hasQuestion": true,
+        "question": "What effect does the perk _ have on its associated action duration?",
+        "smallprint": "If based on stacks, give the value per stack",
+        "type": "number",
+        "prefix": "+",
+        "suffix": "%"
+      },
+      "range": {
+        "hasQuestion": true,
+        "question": "What is the range of the perk _?",
+        "smallprint": "If based on stacks, give the value per stack",
+        "type": "number",
+        "suffix": "m"
+      },
+      "duration": {
+        "hasQuestion": true,
+        "question": "What is the duration of the perk _?",
+        "smallprint": "If based on stacks, give the value per stack",
+        "type": "number",
+        "suffix": "s"
+      },
+      "aura_duration": {
+        "hasQuestion": true,
+        "question": "What is the duration of the aura reading effect of the perk _?",
+        "type": "number",
+        "suffix": "s"
+      },
+      "stacks": {
+        "hasQuestion": true,
+        "question": "What is the maximum number of stacks of the perk _?",
+        "type": "number",
+        "suffix": " Stacks"
+      },
+      "terror_radius": {
+        "hasQuestion": true,
+        "question": "By how much does the perk _ affect the terror radius?",
+        "smallprint": "If based on stacks, give the value per stack",
+        "type": "number",
+        "prefix": "+",
+        "suffix": "m"
+      },
+      "blood_duration": {
+        "hasQuestion": true,
+        "question": "How much longer is blood visible while using the perk _?",
+        "type": "number",
+        "suffix": "s"
+      },
+      "fov": {
+        "hasQuestion": true,
+        "question": "What effect does the perk _ have on FOV?",
+        "type": "number",
+        "prefix": "+",
+        "suffix": "&#8451"
+      },
+      "gate_time": {
+        "hasQuestion": true,
+        "question": "What effect does the perk _ have on exit gate opening time?",
+        "smallprint": "If based on stacks, give the value per stack",
+        "type": "number",
+        "prefix": "+",
+        "suffix": "s"
+      },
+      "regression": {
+        "hasQuestion": true,
+        "question": "What % regression is inflicted by the perk _?",
+        "type": "number",
+        "suffix": "%"
+      },
+      "carry_hit": {
+        "hasQuestion": true,
+        "question": "For how long does the perk _ pause wiggle progress?",
+        "type": "number",
+        "suffix": "s"
+      },
+      "carry_hit": {
+        "hasQuestion": true,
+        "question": "How many additional chests are spawned by the perk _?",
+        "type": "number",
+        "suffix": " Chests"
+      },
+      "lunge": {
+        "hasQuestion": true,
+        "question": "What effect does the perk _ have on lunge range?",
+        "type": "+",
+        "suffix": "%"
+      }
+    },
+    "data": [
+      {
+        "name": "Unnerving Presence",
+        "killer": "The Trapper",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        }
+      },
+      {
+        "name": "Brutal Strength",
+        "killer": "The Trapper",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "action_bonus": {
+          "value": 20,
+          "variance": 5
+        }
+      },
+      {
+        "name": "Agitation",
+        "killer": "The Trapper",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "movement_bonus": {
+          "value": 18,
+          "variance": 6,
+          "min": 6
+        },
+        "terror_radius": {
+          "value": 12,
+          "variance": 4,
+          "min": 4
+        }
+      },
+      {
+        "name": "Predator",
+        "killer": "The Wraith",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        }
+      },
+      {
+        "name": "Bloodhound",
+        "killer": "The Wraith",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "blood_duration": {
+          "value": 4,
+          "variance": 1
+        }
+      },
+      {
+        "name": "Shadowborn",
+        "killer": "The Wraith",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "fov": {
+          "value": 15,
+          "variance": 5,
+          "min": 5
+        }
+      },
+      {
+        "name": "Enduring",
+        "killer": "The Hillbilly",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "action_duration": {
+          "value": -50,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Lightborn",
+        "killer": "The Hillbilly",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "aura_duration": {
+          "value": 10,
+          "variance": 2
+        }
+      },
+      {
+        "name": "Tinkerer",
+        "killer": "The Hillbilly",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "undetectable": {
+          "value": 16,
+          "variance": 4
+        }
+      },
+      {
+        "name": "Stridor",
+        "killer": "The Nurse",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        }
+      },
+      {
+        "name": "Thanatophobia",
+        "killer": "The Nurse",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "action_bonus": {
+          "value": -5,
+          "variance": 1
+        }
+      },
+      {
+        "name": "A Nurse's Calling",
+        "killer": "The Nurse",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "range": {
+          "value": 28,
+          "variance": 4
+        }
+      },
+      {
+        "name": "Save the Best for Last",
+        "killer": "The Shape",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "action_bonus": {
+          "value": 5,
+          "variance": 1
+        }
+      },
+      {
+        "name": "Play With Your Food",
+        "killer": "The Shape",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "movement_bonus": {
+          "value": 5,
+          "variance": 1
+        }
+      },
+      {
+        "name": "Dying Light",
+        "killer": "The Shape",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "action_bonus": {
+          "value": -3,
+          "variance": 1,
+          "max": -1
+        }
+      },
+      {
+        "name": "Hex: The Third Seal",
+        "killer": "The Hag",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "action_bonus": {
+          "value": -3,
+          "variance": 1,
+          "max": -1
+        }
+      },
+      {
+        "name": "Hex: Ruin",
+        "killer": "The Hag",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        }
+      },
+      {
+        "name": "Hex: Devour Hope",
+        "killer": "The Hag",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "movement_bonus": {
+          "value": 5,
+          "variance": 1
+        },
+        "movement_bonus_duration": {
+          "value": 10,
+          "variance": 2
+        },
+        "stacks": {
+          "value": 5,
+          "variance": 1
+        }
+      },
+      {
+        "name": "Overwhelming Presence",
+        "killer": "The Doctor",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        }
+      },
+      {
+        "name": "Monitor & Abuse",
+        "killer": "The Doctor",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "range": {
+          "value": 16,
+          "variance": 4
+        },
+        "fov": {
+          "value": 10,
+          "variance": 5,
+          "min": 5
+        }
+      },
+      {
+        "name": "Overcharge",
+        "killer": "The Doctor",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "regression": {
+          "value": 5,
+          "variance": 1
+        }
+      },
+      {
+        "name": "Beast of Prey",
+        "killer": "The Huntress",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        }
+      },
+      {
+        "name": "Territorial Imperative",
+        "killer": "The Huntress",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "aura_duration": {
+          "value": 3,
+          "variance": 1
+        },
+        "range": {
+          "value": 32,
+          "variance": 8
+        },
+        "cooldown": {
+          "value": 20,
+          "variance": 10,
+          "min": 10
+        }
+      },
+      {
+        "name": "Hex: Huntress Lullaby",
+        "killer": "The Huntress",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "regression": {
+          "value": 6,
+          "variance": 1
+        },
+        "stacks": {
+          "value": 5,
+          "variance": 1
+        }
+      },
+      {
+        "name": "Knock Out",
+        "killer": "The Cannibal",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 15,
+          "variance": 5,
+          "min": 5
+        }
+      },
+      {
+        "name": "Barbecue & Chilli",
+        "killer": "The Cannibal",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "aura_duration": {
+          "value": 4,
+          "variance": 1
+        },
+        "stacks": {
+          "value": 4,
+          "variance": 1
+        }
+      },
+      {
+        "name": "Franklin's Demise",
+        "killer": "The Cannibal",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        }
+      },
+      {
+        "name": "Fire Up",
+        "killer": "The Nightmare",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "action_bonus": {
+          "value": 4,
+          "variance": 1
+        },
+        "stacks": {
+          "value": 5,
+          "variance": 1
+        }
+      },
+      {
+        "name": "Remember Me",
+        "killer": "The Nightmare",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "gate_time": {
+          "value": 4,
+          "variance": 1
+        },
+        "stacks": {
+          "value": 4,
+          "variance": 1
+        }
+      },
+      {
+        "name": "Blood Warden",
+        "killer": "The Nightmare",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 60,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Hangman's Trick",
+        "killer": "The Pig",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "range": {
+          "value": 6,
+          "variance": 2,
+          "min": 2
+        }
+      },
+      {
+        "name": "Surveillance",
+        "killer": "The Pig",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 16,
+          "variance": 4
+        }
+      },
+      {
+        "name": "Make Your Choice",
+        "killer": "The Pig",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "exposed": {
+          "value": 60,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Bamboozle",
+        "killer": "The Clown",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "action_bonus": {
+          "value": 15,
+          "variance": 5,
+          "min": 5
+        },
+        "duration": {
+          "value": 16,
+          "variance": 4
+        }
+      },
+      {
+        "name": "Caulrophobia",
+        "killer": "The Clown",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "action_bonus": {
+          "value": -50,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Pop Goes the Weasel",
+        "killer": "The Clown",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 45,
+          "variance": 15
+        },
+        "regression": {
+          "value": 25,
+          "variance": 5
+        }
+      },
+      {
+        "name": "Spirit Fury",
+        "killer": "The Spirit",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        }
+      },
+      {
+        "name": "Hex: Haunted Ground",
+        "killer": "The Spirit",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "exposed": {
+          "value": 60,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Rancor",
+        "killer": "The Spirit",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "aura_duration": {
+          "value": 3,
+          "variance": 1,
+          "min": 1
+        }
+      },
+      {
+        "name": "Discordance",
+        "killer": "The Legion",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "range": {
+          "value": 128,
+          "variance": 16
+        }
+      },
+      {
+        "name": "Mad Grit",
+        "killer": "The Legion",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "carry_hit": {
+          "value": 4,
+          "variance": 1
+        }
+      },
+      {
+        "name": "Iron Maiden",
+        "killer": "The Legion",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "action_bonus": {
+          "value": 50,
+          "variance": 10
+        },
+        "exposed": {
+          "value": 30,
+          "variance": 10,
+          "min": 10
+        }
+      },
+      {
+        "name": "Corrupt Intervention",
+        "killer": "The Plague",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 120,
+          "variance": 30
+        }
+      },
+      {
+        "name": "Infectious Fright",
+        "killer": "The Plague",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 120,
+          "variance": 30
+        }
+      },
+      {
+        "name": "Dark Devotion",
+        "killer": "The Plague",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "undetectable": {
+          "value": 30,
+          "variance": 10,
+          "min": 10
+        }
+      },
+      {
+        "name": "I'm All Ears",
+        "killer": "The Ghostface",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "aura_duration": {
+          "value": 6,
+          "variance": 2,
+          "min": 2
+        },
+        "range": {
+          "value": 48,
+          "variance": 16,
+          "min": 16
+        },
+        "cooldown": {
+          "value": 40,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Thrilling Tremors",
+        "killer": "The Ghostface",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 16,
+          "variance": 4
+        },
+        "cooldown": {
+          "value": 60,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Furtive Chase",
+        "killer": "The Ghostface",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "terror_radius": {
+          "value": -4,
+          "variance": 2,
+          "max": -2
+        },
+        "tokens": {
+          "value": 4,
+          "variance": 1,
+          "min": 2
+        }
+      },
+      {
+        "name": "Zanshin Tactics",
+        "killer": "The Oni",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "range": {
+          "value": 32,
+          "variance": 8
+        },
+        "tokens": {
+          "value": 4,
+          "variance": 1,
+          "min": 2
+        }
+      },
+      {
+        "name": "Blood Echo",
+        "killer": "The Oni",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "cooldown": {
+          "value": 60,
+          "variance": 10
+        },
+        "exhaustion": {
+          "value": 45,
+          "variance": 15,
+          "min": 15
+        }
+      },
+      {
+        "name": "Nemesis",
+        "killer": "The Oni",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "aura_duration": {
+          "value": 4,
+          "variance": 1
+        },
+        "oblivious": {
+          "value": 60,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Gearhead",
+        "killer": "The Deathslinger",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "aura_duration": {
+          "value": 10,
+          "variance": 2
+        }
+      },
+      {
+        "name": "Dead Man's Switch",
+        "killer": "The Deathslinger",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 45,
+          "variance": 15
+        }
+      },
+      {
+        "name": "Hex: Retribution",
+        "killer": "The Deathslinger",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "oblivious": {
+          "value": 45,
+          "variance": 15,
+          "min": 15
+        },
+        "aura_duration": {
+          "value": 15,
+          "variance": 5,
+          "min": 5
+        }
+      },
+      {
+        "name": "Forced Penance",
+        "killer": "The Executioner",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "broken": {
+          "value": 80,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Trail of Torment",
+        "killer": "The Executioner",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "cooldown": {
+          "value": 60,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Deathbound",
+        "killer": "The Executioner",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 60,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Dragon's Grip",
+        "killer": "The Blight",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "exposed": {
+          "value": 60,
+          "variance": 10
+        },
+        "cooldown": {
+          "value": 80,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Hex: Blood Favour",
+        "killer": "The Blight",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "range": {
+          "value": 32,
+          "variance": 8
+        },
+        "duration": {
+          "value": 15,
+          "variance": 5,
+          "min": 5
+        }
+      },
+      {
+        "name": "Hex: Undying",
+        "killer": "The Blight",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "range": {
+          "value": 4,
+          "variance": 2,
+          "min": 2
+        }
+      },
+      {
+        "name": "Hoarder",
+        "killer": "The Twins",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "range": {
+          "value": 64,
+          "variance": 16
+        },
+        "chests": {
+          "value": 2,
+          "variance": 1,
+          "min": 1
+        }
+      },
+      {
+        "name": "Oppression",
+        "killer": "The Twins",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "cooldown": {
+          "value": 80,
+          "variance": 10
+        }
+      },
+      {
+        "name": "Coup de Grace",
+        "killer": "The Twins",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "stacks": {
+          "value": 5,
+          "variance": 1
+        },
+        "lunge": {
+          "value": 80,
+          "variance": 20
+        }
+      },
+      {
+        "name": "Starstruck",
+        "killer": "The Trickster",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "exposed": {
+          "value": 30,
+          "variance": 10,
+          "min": 10
+        }
+      },
+      {
+        "name": "Hex: Crowd Control",
+        "killer": "The Trickster",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 20,
+          "variance": 5
+        }
+      },
+      {
+        "name": "No Way Out",
+        "killer": "The Trickster",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 12,
+          "variance": 5
+        },
+        "stacks": {
+          "value": 4,
+          "variance": 1,
+          "min": 2
+        }
+      },
+      {
+        "name": "Lethal Pursuer",
+        "killer": "The Nemesis",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "aura_duration": {
+          "value": 9,
+          "variance": 3
+        }
+      },
+      {
+        "name": "Hysteria",
+        "killer": "The Nemesis",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "oblivious": {
+          "value": 30,
+          "variance": 10,
+          "min": 10
+        },
+        "cooldown": {
+          "value": 30,
+          "variance": 10,
+          "min": 10
+        }
+      },
+      {
+        "name": "Eruption",
+        "killer": "The Nemesis",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "regression": {
+          "value": 6,
+          "variance": 1
+        },
+        "incapacitated": {
+          "value": 16,
+          "variance": 4
+        }
+      },
+      {
+        "name": "Deadlock",
+        "killer": "The Pinhead",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 30,
+          "variance": 10,
+          "min": 10
+        }
+      },
+      {
+        "name": "Hex: Plaything",
+        "killer": "The Pinhead",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        }
+      },
+      {
+        "name": "Scourge Hook: Gift of Pain",
+        "killer": "The Pinhead",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "action_bonus": {
+          "value": -9,
+          "variance": 3,
+          "max": -3
+        }
+      },
+      {
+        "name": "Grim Embrace",
+        "killer": "The Artist",
+        "level": {
+          "value": 30,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "duration": {
+          "value": 40,
+          "variance": 10
+        },
+        "aura_duration": {
+          "value": 5,
+          "variance": 1
+        }
+      },
+      {
+        "name": "Scourge Hook: Pain Resonance",
+        "killer": "The Artist",
+        "level": {
+          "value": 35,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "regression": {
+          "value": 15,
+          "variance": 5,
+          "min": 5
+        }
+      },
+      {
+        "name": "Hex: Pentimento",
+        "killer": "The Artist",
+        "level": {
+          "value": 40,
+          "variance": 5,
+          "min": 25,
+          "max": 45
+        },
+        "action_bonus": {
+          "value": -30,
+          "variance": 10,
+          "max": -10
+        }
+      }
+    ]
+  },
   // KILLER POWERS
   {
     "info": {
@@ -2729,6 +4088,12 @@ var questions = [
         "type": "number",
         "suffix": "s"
       },
+      "fountain_time": {
+        "hasQuestion": true,
+        "question": "How long does it take for the killer to ingest corruption at a fountain from the '_' power?",
+        "type": "number",
+        "suffix": "s"
+      },
       "cleanse_time": {
         "hasQuestion": true,
         "question": "How long does it take for a survivor to cleanse sickness from the '_' power?",
@@ -2801,6 +4166,12 @@ var questions = [
         "smalprint": "Starting from the spawn of the Lament Configuration",
         "type": "number",
         "suffix": "s"
+      },
+      "injur_range": {
+        "hasQuestion": true,
+        "question": "At what range do crows deal damage from the '_' power?",
+        "type": "number",
+        "suffix": "m"
       }
     },
     "data": [
@@ -2808,11 +4179,12 @@ var questions = [
         "name": "Bear Trap",
         "setting_time": {
           "value": 2.5,
-          "variance": 0.5
+          "variance": 1,
+          "min": 0.5
         },
         "disarm_time": {
           "value": 3.5,
-          "variance": 0.5
+          "variance": 1
         },
         "trap_count": {
           "value": 8,
@@ -2843,7 +4215,8 @@ var questions = [
         "name": "Chainsaw",
         "charge_time": {
           "value": 2.5,
-          "variance": 0.5
+          "variance": 1,
+          "min": 0.5
         },
         "movement_speed_using": {
           "value": 230,
@@ -2871,7 +4244,8 @@ var questions = [
         },
         "token_time": {
           "value": 3,
-          "variance": 0.5
+          "variance": 1,
+          "min": 1
         }
       },
       {
@@ -2936,7 +4310,8 @@ var questions = [
         },
         "charge_time": {
           "value": 3,
-          "variance": 0.5
+          "variance": 1,
+          "min": 1
         },
         "ammo": {
           "value": 5,
@@ -3006,7 +4381,7 @@ var questions = [
         },
         "reload_time": {
           "value": 3,
-          "variance": 0.5
+          "variance": 1
         },
         "charge_time": {
           "value": 0.25,
@@ -3049,7 +4424,7 @@ var questions = [
         },
         "deactivate_time": {
           "value": 4,
-          "variance": 0.5
+          "variance": 1
         },
         "charge_time": {
           "value": 20,
@@ -3068,7 +4443,7 @@ var questions = [
           "variance": 0.5,
           "min": 0.5
         },
-        "activate_time": {
+        "fountain_time": {
           "value": 1,
           "variance": 0.5,
           "min": 0.5
@@ -3142,7 +4517,7 @@ var questions = [
         "name": "The Redeemer",
         "reload_time": {
           "value": 2.75,
-          "variance": 0.5
+          "variance": 1
         },
         "range": {
           "value": 18,
@@ -3189,7 +4564,7 @@ var questions = [
         },
         "deactivate_time": {
           "value": 2.5,
-          "variance": 0.5
+          "variance": 1
         }
       },
       {
@@ -3205,7 +4580,7 @@ var questions = [
         },
         "deactivate_time": {
           "value": 3,
-          "variance": 0.5
+          "variance": 1
         }
       },
       {
@@ -3271,11 +4646,821 @@ var questions = [
           "variance": 1,
           "min": 2
         },
-        "charge_time": {
-          "value": 1,
-          "variance": 0.5,
-          "min": 0.5
+        "injure_range": {
+          "value": 7.5,
+          "variance": 2.5,
+          "min": 2.5
         }
+      }
+    ]
+  },
+  // OFFERINGS
+  {
+    "info": {
+      "name": {
+        "hasQuestion": false
+      },
+      "rarity": {
+        "hasQuestion": true,
+        "question": "What is the rarity of the _ offering?",
+        "inverseQuestion": "Which of the following offerings is _ rarity?"
+      },
+      "bloodpoints": {
+        "hasQuestion": true,
+        "question": "What effect does the offering _ have on its associated bloodpoint category?",
+        "type": "number",
+        "prefix": "+",
+        "suffix": "%"
+      },
+      "category": {
+        "hasQuestion": true,
+        "question": "What category of bloodpoints are boosted by the _ offering?",
+        "inverseQuestion": "Which of the following offerings boosts bloodpoints gained in the '_' category?"
+      },
+      "luck": {
+        "hasQuestion": true,
+        "question": "What effect does the _ offering have on luck?",
+        "type": "number",
+        "prefix": "+",
+        "suffix": "%"
+      },
+      "basement": {
+        "hasQuestion": true,
+        "question": "How long does the _ offering show the aura of the basement hooks?",
+        "type": "number",
+        "suffix": "s"
+      },
+      "chests": {
+        "hasQuestion": true,
+        "question": "What effect does the _ offering have on the number of spawned chests?",
+        "type": "number",
+        "prefix": "+",
+        "suffix": " Chests"
+      },
+      "mist": {
+        "hasQuestion": true,
+        "question": "What effect does the _ offering have on the thickness of the dark mist?",
+        "type": "number",
+        "prefix": "+",
+        "suffix": "%"
+      },
+      "hook_distance": {
+        "hasQuestion": true,
+        "question": "What effect does the _ offering have on the minimum spawn distance between hooks?",
+        "type": "number",
+        "prefix": "+",
+        "suffix": "m"
+      },
+      "realm": {
+        "hasQuestion": true,
+        "question": "The _ offering increases odds of being sent to which realm?",
+        "inverseQuestion": "Which of the following offerings increases the odds of being sent to the _ realm?"
+      },
+      "killer": {
+        "hasQuestion": true,
+        "question": "On release, which killer could be played for a single trial using the _ offering?",
+        "inverseQuestion": "On release, which offering allowed _ to be played for a single trial?"
+      }
+    },
+    "data": [
+      {
+        "name": "Escape! Cake",
+        "rarity": "Uncommon",
+        "bloodpoints": {
+          "value": 100,
+          "variance": 25
+        },
+        "category": "All"
+      },
+      {
+        "name": "Hollow Shell",
+        "rarity": "Uncommon",
+        "bloodpoints": {
+          "value": 25,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "All"
+      },
+      {
+        "name": "Sealed Envelope",
+        "rarity": "Uncommon",
+        "bloodpoints": {
+          "value": 25,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "All"
+      },
+      {
+        "name": "Survivor Pudding",
+        "rarity": "Uncommon",
+        "bloodpoints": {
+          "value": 100,
+          "variance": 25
+        },
+        "category": "All"
+      },
+      {
+        "name": "Bloody Party Streamers",
+        "rarity": "Rare",
+        "bloodpoints": {
+          "value": 100,
+          "variance": 25
+        },
+        "category": "All"
+      },
+      {
+        "name": "Bound Envelope",
+        "rarity": "Rare",
+        "bloodpoints": {
+          "value": 25,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "All"
+      },
+      {
+        "name": "Ghastly Gateau",
+        "rarity": "Event",
+        "bloodpoints": {
+          "value": 104,
+          "variance": 1
+        },
+        "category": "All"
+      },
+      {
+        "name": "Gruesome Gateau",
+        "rarity": "Event",
+        "bloodpoints": {
+          "value": 103,
+          "variance": 1
+        },
+        "category": "All"
+      },
+      {
+        "name": "Sacrificial Cake",
+        "rarity": "Event",
+        "bloodpoints": {
+          "value": 105,
+          "variance": 1
+        },
+        "category": "All"
+      },
+      {
+        "name": "Primrose Blossom Sachet",
+        "rarity": "Common",
+        "bloodpoints": {
+          "value": 50,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Altruism"
+      },
+      {
+        "name": "Fresh Primrose Blossom",
+        "rarity": "Uncommon",
+        "bloodpoints": {
+          "value": 75,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Altruism"
+      },
+      {
+        "name": "Fragrant Primrose Blossom",
+        "rarity": "Rare",
+        "bloodpoints": {
+          "value": 100,
+          "variance": 25
+        },
+        "category": "Altruism"
+      },
+      {
+        "name": "Sweet William Sachet",
+        "rarity": "Common",
+        "bloodpoints": {
+          "value": 50,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Boldness"
+      },
+      {
+        "name": "Fresh Sweet William",
+        "rarity": "Uncommon",
+        "bloodpoints": {
+          "value": 75,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Boldness"
+      },
+      {
+        "name": "Fragrant Sweet William",
+        "rarity": "Rare",
+        "bloodpoints": {
+          "value": 100,
+          "variance": 25
+        },
+        "category": "Boldness"
+      },
+      {
+        "name": "Tanager Wreath",
+        "rarity": "Common",
+        "bloodpoints": {
+          "value": 50,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Brutality"
+      },
+      {
+        "name": "Devout Tanager Wreath",
+        "rarity": "Uncommon",
+        "bloodpoints": {
+          "value": 75,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Brutality"
+      },
+      {
+        "name": "Ardent Tanager Wreath",
+        "rarity": "Rare",
+        "bloodpoints": {
+          "value": 100,
+          "variance": 25
+        },
+        "category": "Brutality"
+      },
+      {
+        "name": "Raven Wreath",
+        "rarity": "Common",
+        "bloodpoints": {
+          "value": 50,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Deviousness"
+      },
+      {
+        "name": "Devout Raven Wreath",
+        "rarity": "Uncommon",
+        "bloodpoints": {
+          "value": 75,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Deviousness"
+      },
+      {
+        "name": "Ardent Raven Wreath",
+        "rarity": "Rare",
+        "bloodpoints": {
+          "value": 100,
+          "variance": 25
+        },
+        "category": "Deviousness"
+      },
+      {
+        "name": "Spotted Owl Wreath",
+        "rarity": "Common",
+        "bloodpoints": {
+          "value": 50,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Hunter"
+      },
+      {
+        "name": "Devout Spotted Owl Wreath",
+        "rarity": "Uncommon",
+        "bloodpoints": {
+          "value": 75,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Hunter"
+      },
+      {
+        "name": "Ardent Spotted Owl Wreath",
+        "rarity": "Rare",
+        "bloodpoints": {
+          "value": 100,
+          "variance": 25
+        },
+        "category": "Hunter"
+      },
+      {
+        "name": "Bog Laurel Sachet",
+        "rarity": "Common",
+        "bloodpoints": {
+          "value": 50,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Objectives"
+      },
+      {
+        "name": "Fresh Bog Laurel",
+        "rarity": "Uncommon",
+        "bloodpoints": {
+          "value": 75,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Objectives"
+      },
+      {
+        "name": "Fragrant Bog Laurel",
+        "rarity": "Rare",
+        "bloodpoints": {
+          "value": 100,
+          "variance": 25
+        },
+        "category": "Objectives"
+      },
+      {
+        "name": "Shrike Wreath",
+        "rarity": "Common",
+        "bloodpoints": {
+          "value": 50,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Sacrifice"
+      },
+      {
+        "name": "Devout Shrike Wreath",
+        "rarity": "Uncommon",
+        "bloodpoints": {
+          "value": 75,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Sacrifice"
+      },
+      {
+        "name": "Ardent Shrike Wreath",
+        "rarity": "Rare",
+        "bloodpoints": {
+          "value": 100,
+          "variance": 25
+        },
+        "category": "Sacrifice"
+      },
+      {
+        "name": "Crispleaf Amaranth Sachet",
+        "rarity": "Common",
+        "bloodpoints": {
+          "value": 50,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Survival"
+      },
+      {
+        "name": "Fresh Crispleaf Amaranth",
+        "rarity": "Uncommon",
+        "bloodpoints": {
+          "value": 75,
+          "variance": 25,
+          "min": 25
+        },
+        "category": "Survival"
+      },
+      {
+        "name": "Fragrant Crispleaf Amaranth",
+        "rarity": "Rare",
+        "bloodpoints": {
+          "value": 100,
+          "variance": 25
+        },
+        "category": "Survival"
+      },
+      {
+        "name": "Chalk Pouch",
+        "rarity": "Common",
+        "luck": {
+          "value": 1,
+          "variance": 1,
+          "min": 1
+        }
+      },
+      {
+        "name": "Cream Chalk Pouch",
+        "rarity": "Uncommon",
+        "luck": {
+          "value": 2,
+          "variance": 1,
+          "min": 1
+        }
+      },
+      {
+        "name": "Ivory Chalk Pouch",
+        "rarity": "Rare",
+        "luck": {
+          "value": 3,
+          "variance": 1,
+          "min": 1
+        }
+      },
+      {
+        "name": "Salt Pouch",
+        "rarity": "Uncommon",
+        "luck": {
+          "value": 1,
+          "variance": 1,
+          "min": 1
+        }
+      },
+      {
+        "name": "Black Salt Statuette",
+        "rarity": "Rare",
+        "luck": {
+          "value": 2,
+          "variance": 1,
+          "min": 1
+        }
+      },
+      {
+        "name": "Vigo's Jar of Salty Lips",
+        "rarity": "Very Rare",
+        "luck": {
+          "value": 3,
+          "variance": 1,
+          "min": 1
+        }
+      },
+      {
+        "name": "Bloodied Blueprint",
+        "rarity": "Common",
+        "basement": {
+          "value": 20,
+          "variance": 5
+        }
+      },
+      {
+        "name": "Torn Blueprint",
+        "rarity": "Common",
+        "basement": {
+          "value": 20,
+          "variance": 5
+        }
+      },
+      {
+        "name": "Scratched Coin",
+        "rarity": "Uncommon",
+        "basement": {
+          "value": -1,
+          "variance": 1,
+          "max": -1
+        }
+      },
+      {
+        "name": "Tarnished Coin",
+        "rarity": "Uncommon",
+        "basement": {
+          "value": 1,
+          "variance": 1,
+          "min": 1
+        }
+      },
+      {
+        "name": "Cut Coin",
+        "rarity": "Very Rare",
+        "basement": {
+          "value": -2,
+          "variance": 1,
+          "min": -4,
+          "max": -1
+        }
+      },
+      {
+        "name": "Shiny Coin",
+        "rarity": "Very Rare",
+        "basement": {
+          "value": 2,
+          "variance": 1,
+          "min": 1,
+          "max": 4
+        }
+      },
+      {
+        "name": "Clear Reagent",
+        "rarity": "Common",
+        "mist": {
+          "value": -50,
+          "variance": 25,
+          "max": -25
+        }
+      },
+      {
+        "name": "Faint Reagent",
+        "rarity": "Common",
+        "mist": {
+          "value": 25,
+          "variance": 25,
+          "min": 25
+        }
+      },
+      {
+        "name": "Hazy Reagent",
+        "rarity": "Uncommon",
+        "mist": {
+          "value": 50,
+          "variance": 25,
+          "min": 25
+        }
+      },
+      {
+        "name": "Murky Reagent",
+        "rarity": "Very Rare",
+        "mist": {
+          "value": 75,
+          "variance": 25,
+          "min": 25
+        }
+      },
+      {
+        "name": "Annotated Blueprint",
+        "rarity": "Common"
+      },
+      {
+        "name": "Vigo's Blueprint",
+        "rarity": "Common"
+      },
+      {
+        "name": "Mouldy Oak",
+        "rarity": "Uncommon",
+        "hook_distance": {
+          "value": -1.5,
+          "variance": 1,
+          "max": -0.5
+        }
+      },
+      {
+        "name": "Rotten Oak",
+        "rarity": "Rare",
+        "hook_distance": {
+          "value": -2.5,
+          "variance": 1,
+          "max": -0.5
+        }
+      },
+      {
+        "name": "Putrid Oak",
+        "rarity": "Very Rare",
+        "hook_distance": {
+          "value": -3.5,
+          "variance": 1,
+          "max": -0.5
+        }
+      },
+      {
+        "name": "Petrified Oak",
+        "rarity": "Very Rare",
+        "hook_distance": {
+          "value": 1,
+          "variance": 1,
+          "min": 1
+        }
+      },
+      {
+        "name": "Cypress Memento Mori",
+        "rarity": "Uncommon"
+      },
+      {
+        "name": "Ivory Memento Mori",
+        "rarity": "Rare"
+      },
+      {
+        "name": "Ebony Memento Mori",
+        "rarity": "Ultra Rare"
+      },
+      {
+        "name": "Shredded Plate",
+        "rarity": "Common",
+        "realm": "Autohaven Wreckers"
+      },
+      {
+        "name": "Virginia Plate",
+        "rarity": "Uncommon",
+        "realm": "Autohaven Wreckers"
+      },
+      {
+        "name": "Azarov's Key",
+        "rarity": "Rare",
+        "realm": "Autohaven Wreckers"
+      },
+      {
+        "name": "Fuming Cordage",
+        "rarity": "Common",
+        "realm": "Backwater Swamp"
+      },
+      {
+        "name": "Fuming Welcome Sign",
+        "rarity": "Uncommon",
+        "realm": "Backwater Swamp"
+      },
+      {
+        "name": "Grandma's Cookbook",
+        "rarity": "Rare",
+        "realm": "Backwater Swamp"
+      },
+      {
+        "name": "Cattle Tag 28",
+        "rarity": "Common",
+        "realm": "Coldwind Farm"
+      },
+      {
+        "name": "Cattle Tag 81",
+        "rarity": "Uncommon",
+        "realm": "Coldwind Farm"
+      },
+      {
+        "name": "Heart Locket",
+        "rarity": "Rare",
+        "realm": "Coldwind Farm"
+      },
+      {
+        "name": "Lunacy Ticket",
+        "rarity": "Common",
+        "realm": "Crotus Prenn Asylum"
+      },
+      {
+        "name": "P. Elliott Lunacy Ticket",
+        "rarity": "Uncommon",
+        "realm": "Crotus Prenn Asylum"
+      },
+      {
+        "name": "Charred Wedding Photograph",
+        "rarity": "Rare",
+        "realm": "Crotus Prenn Asylum"
+      },
+      {
+        "name": "Crow's Eye",
+        "rarity": "Rare",
+        "realm": "Forsaken Boneyard"
+      },
+      {
+        "name": "Jigsaw Piece",
+        "rarity": "Rare",
+        "realm": "Gideon Meat Plant"
+      },
+      {
+        "name": "Dusty Noose",
+        "rarity": "Rare",
+        "realm": "Grave of Glenvale"
+      },
+      {
+        "name": "Harvest Festival Leaflet",
+        "rarity": "Common",
+        "realm": "Haddonfield"
+      },
+      {
+        "name": "Decrepit Clapboard",
+        "rarity": "Uncommon",
+        "realm": "Haddonfield"
+      },
+      {
+        "name": "Strode Realty Key",
+        "rarity": "Rare",
+        "realm": "Haddonfield"
+      },
+      {
+        "name": "Hawkins National Laboratory ID",
+        "rarity": "Rare",
+        "realm": "Hawkins National Laboratory"
+      },
+      {
+        "name": "Emergency Certificate",
+        "rarity": "Common",
+        "realm": "Lery's Memorial Institute"
+      },
+      {
+        "name": "Psychiatric Assessment Report",
+        "rarity": "Uncommon",
+        "realm": "Lery's Memorial Institute"
+      },
+      {
+        "name": "Shattered Glasses",
+        "rarity": "Rare",
+        "realm": "Lery's Memorial Institute"
+      },
+      {
+        "name": "MacMillan Ledger Page",
+        "rarity": "Common",
+        "realm": "The MacMillan Estate"
+      },
+      {
+        "name": "Signed Ledger Page",
+        "rarity": "Uncommon",
+        "realm": "The MacMillan Estate"
+      },
+      {
+        "name": "MacMillan's Phalanx Bone",
+        "rarity": "Rare",
+        "realm": "The MacMillan Estate"
+      },
+      {
+        "name": "Damaged Photo",
+        "rarity": "Rare",
+        "realm": "Ormond"
+      },
+      {
+        "name": "RPD Badge",
+        "rarity": "Rare",
+        "realm": "Raccoon City"
+      },
+      {
+        "name": "Painted River Rock",
+        "rarity": "Common",
+        "realm": "Red Forest"
+      },
+      {
+        "name": "Children's Book",
+        "rarity": "Uncommon",
+        "realm": "Red Forest"
+      },
+      {
+        "name": "The Last Mask",
+        "rarity": "Rare",
+        "realm": "Red Forest"
+      },
+      {
+        "name": "Mary's Letter",
+        "rarity": "Rare",
+        "realm": "Silent Hill"
+      },
+      {
+        "name": "The Pied Piper",
+        "rarity": "Rare",
+        "realm": "Springwood"
+      },
+      {
+        "name": "Yamaoka Family Crest",
+        "rarity": "Rare",
+        "realm": "Yamaoka Estate"
+      },
+      {
+        "name": "Shroud of Union",
+        "rarity": "Uncommon"
+      },
+      {
+        "name": "Shroud of Separation",
+        "rarity": "Uncommon"
+      },
+      {
+        "name": "Vigo's Shroud",
+        "rarity": "Uncommon"
+      },
+      {
+        "name": "Shroud of Binding",
+        "rarity": "Very Rare"
+      },
+      {
+        "name": "Black Splinter",
+        "rarity": "Ultra Rare",
+        "killer": "The Shape"
+      },
+      {
+        "name": "Bone Splinter",
+        "rarity": "Ultra Rare",
+        "killer": "The Cannibal"
+      },
+      {
+        "name": "Glass Splinter",
+        "rarity": "Ultra Rare",
+        "killer": "The Pig"
+      },
+      {
+        "name": "Muddy Splinter",
+        "rarity": "Ultra Rare",
+        "killer": "The Hag"
+      },
+      {
+        "name": "Shock Splinter",
+        "rarity": "Ultra Rare",
+        "killer": "The Doctor"
+      },
+      {
+        "name": "Smoking Splinter",
+        "rarity": "Ultra Rare",
+        "killer": "The Nightmare"
+      },
+      {
+        "name": "Sacrificial Ward",
+        "rarity": "Rare"
+      },
+      {
+        "name": "Black Ward",
+        "rarity": "Very Rare"
+      },
+      {
+        "name": "White Ward",
+        "rarity": "Very Rare"
       }
     ]
   }
