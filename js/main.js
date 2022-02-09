@@ -28,6 +28,7 @@ function newQuestion() {
 
     // Choose a category
     let category = Math.floor(Math.random() * questions.length);
+    //let category = 6;
     let info = questions[category]['info'];
     let data = questions[category]['data'];
 

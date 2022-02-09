@@ -4674,7 +4674,7 @@ var questions = [
       },
       "category": {
         "hasQuestion": true,
-        "question": "What category of bloodpoints are boosted by the _ offering?",
+        "question": "What category of bloodpoints is boosted by the _ offering?",
         "inverseQuestion": "Which of the following offerings boosts bloodpoints gained in the '_' category?"
       },
       "luck": {
@@ -5112,7 +5112,7 @@ var questions = [
       {
         "name": "Scratched Coin",
         "rarity": "Uncommon",
-        "basement": {
+        "chests": {
           "value": -1,
           "variance": 1,
           "max": -1
@@ -5121,7 +5121,7 @@ var questions = [
       {
         "name": "Tarnished Coin",
         "rarity": "Uncommon",
-        "basement": {
+        "chests": {
           "value": 1,
           "variance": 1,
           "min": 1
@@ -5130,7 +5130,7 @@ var questions = [
       {
         "name": "Cut Coin",
         "rarity": "Very Rare",
-        "basement": {
+        "chests": {
           "value": -2,
           "variance": 1,
           "min": -4,
@@ -5140,7 +5140,7 @@ var questions = [
       {
         "name": "Shiny Coin",
         "rarity": "Very Rare",
-        "basement": {
+        "chests": {
           "value": 2,
           "variance": 1,
           "min": 1,
