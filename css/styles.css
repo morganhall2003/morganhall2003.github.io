@@ -73,6 +73,10 @@ button:hover {
     height: 36%;
 }
 
+#result {
+    font-size: 2em;
+}
+
 #play-again {
     width: 50%;
 }
