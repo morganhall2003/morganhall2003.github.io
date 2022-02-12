@@ -4015,6 +4015,12 @@ var questions = [
         "type": "number",
         "suffix": "%"
       },
+      "movement_speed_ambushing": {
+        "hasQuestion": true,
+        "question": "What is the movement speed of the killer while ambushing with the '_' power?",
+        "type": "number",
+        "suffix": "%"
+      },
       "token_time": {
         "hasQuestion": true,
         "question": "How long does it take to recharge a token of the '_' power?",
@@ -4167,7 +4173,7 @@ var questions = [
         "type": "number",
         "suffix": "s"
       },
-      "injur_range": {
+      "injure_range": {
         "hasQuestion": true,
         "question": "At what range do crows deal damage from the '_' power?",
         "type": "number",
@@ -4345,8 +4351,8 @@ var questions = [
       {
         "name": "Dream Demon",
         "trap_count": {
-          "value": 8,
-          "variance": 2
+          "value": 5,
+          "variance": 1
         },
         "cooldown": {
           "value": 45,
@@ -4364,7 +4370,7 @@ var questions = [
           "value": 4,
           "variance": 1
         },
-        "movement_speed_using": {
+        "movement_speed_ambushing": {
           "value": 172.5,
           "variance": 15
         },
@@ -4381,12 +4387,13 @@ var questions = [
         },
         "reload_time": {
           "value": 3,
-          "variance": 1
+          "variance": 1,
+          "min": 1
         },
         "charge_time": {
-          "value": 0.25,
-          "variance": 0.25,
-          "min": 0.25
+          "value": 1,
+          "variance": 0.5,
+          "min": 0.5
         },
         "movement_speed_charging": {
           "value": 115,
