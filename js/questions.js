@@ -2770,7 +2770,7 @@ var questions = [
         "type": "number",
         "suffix": "s"
       },
-      "carry_hit": {
+      "chests": {
         "hasQuestion": true,
         "question": "How many additional chests are spawned by the perk _?",
         "type": "number",
