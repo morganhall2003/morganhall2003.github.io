@@ -10,11 +10,6 @@ var questions = [
         "question": "What is the nationality of _?",
         "inverseQuestion": "Which of the following survivors is _?"
       },
-      "voice_actor": {
-        "hasQuestion": true,
-        "question": "Who voices _?",
-        "inverseQuestion": "Which of the following survivors is voiced by _?"
-      },
       "difficulty": {
         "hasQuestion": true,
         "inverseOnly": true,
@@ -30,202 +25,174 @@ var questions = [
       {
         "name": "Dwight Fairfield",
         "nationality": "American",
-        "voice_actor": "Ian Chuprun",
         "difficulty": "Easy",
         "dlc": "Base Game"
       },
       {
         "name": "Meg Thomas",
         "nationality": "American",
-        "voice_actor": "Ingrid Blemur",
         "difficulty": "Easy",
         "dlc": "Base Game"
       },
       {
         "name": "Claudette Morel",
         "nationality": "Canadian",
-        "voice_actor": "Sarah Robinson",
         "difficulty": "Easy",
         "dlc": "Base Game"
       },
       {
         "name": "Jake Park",
         "nationality": "Asian American",
-        "voice_actor": "Kevin Boissonneault",
         "difficulty": "Intermediate",
         "dlc": "Base Game"
       },
       {
         "name": "Nea Karlsson",
         "nationality": "Swedish",
-        "voice_actor": "Morgane Ravasi",
         "difficulty": "Intermediate",
         "dlc": "The Last Breath Chapter"
       },
       {
         "name": "Laurie Strode",
         "nationality": "American",
-        "voice_actor": "Catherine Lecours",
         "difficulty": "Hard",
         "dlc": "The HALLOWEEN Chapter"
       },
       {
         "name": "Ace Visconti",
         "nationality": "Argentinian of Italian descent",
-        "voice_actor": "Sebastien Varas",
         "difficulty": "Easy",
         "dlc": "Of Flesh and Mud"
       },
       {
         "name": "Bill Overbeck",
         "nationality": "American",
-        "voice_actor": "Ricardo Gomez",
         "difficulty": "Hard",
         "dlc": "Left Behind"
       },
       {
         "name": "Feng Min",
         "nationality": "Chinese",
-        "voice_actor": "Bianca Lavric",
         "difficulty": "Easy",
         "dlc": "Spark of Madness"
       },
       {
         "name": "David King",
         "nationality": "English",
-        "voice_actor": "Stefan Horvath",
         "difficulty": "Intermediate",
         "dlc": "A Lullaby for the Dark"
       },
       {
         "name": "Quentin Smith",
         "nationality": "American",
-        "voice_actor": "Louis McLean",
         "difficulty": "Easy",
         "dlc": "A Nightmare on Elm Street"
       },
       {
         "name": "David Tapp",
         "nationality": "African American",
-        "voice_actor": "Dave Blake",
         "difficulty": "Intermediate",
         "dlc": "The SAW Chapter"
       },
       {
         "name": "Kate Denson",
         "nationality": "American",
-        "voice_actor": "Daphne Poulin Gourdeau",
         "difficulty": "Easy",
         "dlc": "Curtain Call"
       },
       {
         "name": "Adam Francis",
         "nationality": "Jamaican",
-        "voice_actor": "Joseph Bourbaki",
         "difficulty": "Intermediate",
         "dlc": "Shattered Bloodline"
       },
       {
         "name": "Jeff Johansen",
         "nationality": "Canadian with Norwegian roots",
-        "voice_actor": "Filip Ivanovic",
         "difficulty": "Intermediate",
         "dlc": "Darkness Among Us"
       },
       {
         "name": "Jane Romero",
         "nationality": "Latin American",
-        "voice_actor": "Patricia Brochu-Gagne",
         "difficulty": "Intermediate",
         "dlc": "Demise of the Faithful"
       },
       {
         "name": "Ash Williams",
         "nationality": "American",
-        "voice_actor": "Bruce Campbell",
         "difficulty": "Easy",
         "dlc": "Ash vs Evil Dead"
       },
       {
         "name": "Nancy Wheeler",
         "nationality": "American",
-        "voice_actor": "Diane Guillemont",
         "difficulty": "Easy",
         "dlc": "Stranger Things"
       },
       {
         "name": "Steve Harrington",
         "nationality": "American",
-        "voice_actor": "Unknown",
         "difficulty": "Easy",
         "dlc": "Stranger Things"
       },
       {
         "name": "Yui Kimura",
         "nationality": "Japanese",
-        "voice_actor": "Daniela Pinto",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "dlc": "Cursed Legacy"
       },
       {
         "name": "Zarina Kassir",
         "nationality": "Lebanese",
-        "voice_actor": "Emilie Paquin",
         "difficulty": "Intermediate",
         "dlc": "Chains of Hate"
       },
       {
         "name": "Cheryl Mason",
-        "nationality": "American ",
-        "voice_actor": "Unknown",
+        "nationality": "American",
         "difficulty": "Easy",
         "dlc": "Silent Hill"
       },
       {
         "name": "Felix Richter",
         "nationality": "German",
-        "voice_actor": "Frederic Poirier",
         "difficulty": "Intermediate",
         "dlc": "Descend Beyond"
       },
       {
         "name": "Elodie Rakoto",
         "nationality": "French Madagassian",
-        "voice_actor": "Beatrix Moersch",
         "difficulty": "Intermediate",
         "dlc": "A Binding of Kin"
       },
       {
         "name": "Yun-Jin Lee",
         "nationality": "Korean",
-        "voice_actor": "So-Hee Kim",
         "difficulty": "Easy",
         "dlc": "All-Kill"
       },
       {
         "name": "Jill Valentine",
         "nationality": "American",
-        "voice_actor": "Chaney Crabb",
         "difficulty": "Intermediate",
         "dlc": "Resident Evil"
       },
       {
         "name": "Leon Kennedy",
         "nationality": "American",
-        "voice_actor": "Riley McShane",
         "difficulty": "Intermediate",
         "dlc": "Resident Evil"
       },
       {
         "name": "Mikaela Reid",
         "nationality": "Unknown",
-        "voice_actor": "Adrienne Cowan",
         "difficulty": "Intermediate",
         "dlc": "Hour of the Witch"
       },
       {
         "name": "Jonah Vasquez",
         "nationality": "Hispanic American",
-        "voice_actor": "Michael Alvarez",
         "difficulty": "Easy",
         "dlc": "Portrait of a Murder"
       }
@@ -2026,11 +1993,6 @@ var questions = [
         "inverseOnly": true,
         "inverseQuestion": "Which of the following killers has an in-game height of _?"
       },
-      "voice_actor": {
-        "hasQuestion": true,
-        "question": "Who voices _?",
-        "inverseQuestion": "Which of the following killers is voiced by _?"
-      },
       "difficulty": {
         "hasQuestion": true,
         "inverseOnly": true,
@@ -2059,7 +2021,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Filip Ivanovic",
         "difficulty": "Easy",
         "dlc": "Base Game"
       },
@@ -2080,7 +2041,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Filip Ivanovic",
         "difficulty": "Intermediate",
         "dlc": "Base Game"
       },
@@ -2101,7 +2061,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Filip Ivanovic",
         "difficulty": "Easy",
         "dlc": "Base Game"
       },
@@ -2121,7 +2080,6 @@ var questions = [
           "max": 36
         },
         "height": "Average",
-        "voice_actor": "Anais Renevey",
         "difficulty": "Hard",
         "dlc": "The Last Breath Chapter"
       },
@@ -2158,7 +2116,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Frederic Poirier",
         "difficulty": "Intermediate",
         "dlc": "The HALLOWEEN Chapter"
       },
@@ -2180,7 +2137,6 @@ var questions = [
           "min": 20
         },
         "height": "Average",
-        "voice_actor": "Eliane Pregent",
         "difficulty": "Intermediate",
         "dlc": "Of Flesh and Mud"
       },
@@ -2201,7 +2157,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Alex Lin",
         "difficulty": "Hard",
         "dlc": "Spark of Madness"
       },
@@ -2223,7 +2178,6 @@ var questions = [
           "min": 20
         },
         "height": "Tall",
-        "voice_actor": "Amelie Leguiader",
         "difficulty": "Intermediate",
         "dlc": "A Lullaby for the Dark"
       },
@@ -2244,7 +2198,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Filip Ivanovic",
         "difficulty": "Easy",
         "dlc": "LEATHERFACE"
       },
@@ -2265,7 +2218,6 @@ var questions = [
           "max": 36
         },
         "height": "Average",
-        "voice_actor": "Filip Ivanovic",
         "difficulty": "Hard",
         "dlc": "A Nightmare on Elm Street"
       },
@@ -2290,7 +2242,6 @@ var questions = [
           "max": 36
         },
         "height": "Average",
-        "voice_actor": "Christine Marsh",
         "difficulty": "Intermediate",
         "dlc": "The SAW Chapter"
       },
@@ -2311,7 +2262,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Sebastien Duva",
         "difficulty": "Intermediate",
         "dlc": "Curtain Call"
       },
@@ -2333,7 +2283,6 @@ var questions = [
           "min": 20
         },
         "height": "Average",
-        "voice_actor": "Gabrielle Murphy",
         "difficulty": "Hard",
         "dlc": "Shattered Bloodline"
       },
@@ -2373,7 +2322,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Unknown",
         "difficulty": "Intermediate",
         "dlc": "Demise of the Faithful"
       },
@@ -2398,7 +2346,6 @@ var questions = [
           "max": 36
         },
         "height": "Average",
-        "voice_actor": "Filip Ivanovic",
         "difficulty": "Hard",
         "dlc": "Ghost Face"
       },
@@ -2438,7 +2385,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Jean-Baptiste Garnier",
         "difficulty": "Hard",
         "dlc": "Cursed Legacy"
       },
@@ -2460,7 +2406,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Patrick Harris",
         "difficulty": "Intermediate",
         "dlc": "Chains of Hate"
       },
@@ -2481,7 +2426,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Jean-Baptiste Garnier",
         "difficulty": "Intermediate",
         "dlc": "Silent Hill"
       },
@@ -2502,7 +2446,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Jean-Baptiste Garnier & Mathieu Favier",
         "difficulty": "Hard",
         "dlc": "Descend Beyond"
       },
@@ -2523,7 +2466,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Catherine Gauthier & Jean-Baptiste Garnier",
         "difficulty": "Hard",
         "dlc": "A Binding of Kin"
       },
@@ -2545,7 +2487,6 @@ var questions = [
           "min": 20
         },
         "height": "Average",
-        "voice_actor": "Titus Kim",
         "difficulty": "Easy",
         "dlc": "All-Kill"
       },
@@ -2566,7 +2507,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Sebastien Croteau",
         "difficulty": "Intermediate",
         "dlc": "Resident Evil"
       },
@@ -2587,7 +2527,6 @@ var questions = [
           "max": 36
         },
         "height": "Tall",
-        "voice_actor": "Doug Bradley",
         "difficulty": "Hard",
         "dlc": "Hellraiser"
       },
@@ -2608,7 +2547,6 @@ var questions = [
           "max": 36
         },
         "height": "Average",
-        "voice_actor": "Unknown",
         "difficulty": "Intermediate",
         "dlc": "Portrait of a Murder"
       }

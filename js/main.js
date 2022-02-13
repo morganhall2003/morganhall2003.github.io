@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
     answersElement = document.getElementById("answers");
     playAgainElement = document.getElementById("play-again");
     resultElement = document.getElementById("result-container");
-    questionElement.style.animation = 'fade-in 1s both';
-    smallprintElement.style.animation = 'fade-in 1s both';
-    answersElement.style.animation = 'fade-in 1s 0.5s both';
-    document.getElementById("score").style.animation = 'fade-in 1s both';
+    questionElement.style.animation = 'fade-in 0.5s both';
+    smallprintElement.style.animation = 'fade-in 0.5s both';
+    answersElement.style.animation = 'fade-in 0.5s 0.25s both';
+    document.getElementById("score").style.animation = 'fade-in 0.5s both';
     newQuestion();
 });
 
@@ -128,41 +128,41 @@ function chooseAnswer(_answer) {
     if (selectable) {
         selectable = false;
         if (answer == _answer) {
-            answersElement.children[_answer].style.animation = 'correct 1s both';
+            answersElement.children[_answer].style.animation = 'correct 0.5s both';
             score += 1;
             document.getElementById("score").innerText = score.toString();
             setTimeout(() => {
-                questionElement.style.animation = 'fade-out 1s both';
-                smallprintElement.style.animation = 'fade-out 1s both';
-                answersElement.style.animation = 'fade-out 1s both';
+                questionElement.style.animation = 'fade-out 0.5s both';
+                smallprintElement.style.animation = 'fade-out 0.5s both';
+                answersElement.style.animation = 'fade-out 0.5s both';
                 setTimeout(() => {
                     for (let i = 0; i < answersElement.children.length; i ++) {
                         answersElement.children[i].style = "";
                     }
                     newQuestion();
-                    questionElement.style.animation = 'fade-in 1s both';
-                    smallprintElement.style.animation = 'fade-in 1s both';
-                    answersElement.style.animation = 'fade-in 1s 0.5s both';
+                    questionElement.style.animation = 'fade-in 0.5s both';
+                    smallprintElement.style.animation = 'fade-in 0.5s both';
+                    answersElement.style.animation = 'fade-in 0.5s 0.5s both';
                     setTimeout(() => {
                         selectable = true;
-                    }, 1000);
-                }, 1000);
-            }, 1000);
+                    }, 500);
+                }, 500);
+            }, 500);
         } else {
-            answersElement.children[_answer].style.animation = 'incorrect 1s both';
-            answersElement.children[answer].style.animation = 'correct 1s 0.5s both';
+            answersElement.children[_answer].style.animation = 'incorrect 0.5s both';
+            answersElement.children[answer].style.animation = 'correct 0.5s 0.5s both';
             setTimeout(() => {
-                questionElement.style.animation = 'fade-out 1s both';
-                smallprintElement.style.animation = 'fade-out 1s both';
-                answersElement.style.animation = 'fade-out 1s both';
+                questionElement.style.animation = 'fade-out 0.5s both';
+                smallprintElement.style.animation = 'fade-out 0.5s both';
+                answersElement.style.animation = 'fade-out 0.5s both';
                 setTimeout(() => {
                     playAgainElement.style.removeProperty("display");
                     resultElement.style.removeProperty("display");
                     questionContainerElement.style.display = "none";
                     smallprintElement.style.display = "none";
                     answersElement.style.display = "none";
-                    playAgainElement.style.animation = 'fade-in 1s 0.5s both';
-                    resultElement.style.animation = 'fade-in 1s both';
+                    playAgainElement.style.animation = 'fade-in 0.5s 0.5s both';
+                    resultElement.style.animation = 'fade-in 0.5s both';
                     if (score < 10) {
                         resultElement.children[0].innerText = "Entity Displeased.";
                     } else if (score < 25) {
@@ -172,8 +172,8 @@ function chooseAnswer(_answer) {
                     } else {
                         resultElement.children[0].innerText = "Merciless Killer.";
                     }
-                }, 1000);
-            }, 2000);
+                }, 500);
+            }, 1500);
         }
     }
 }
@@ -181,8 +181,8 @@ function chooseAnswer(_answer) {
 function restart() {
     score = 0;
     document.getElementById("score").innerText = score.toString();
-    playAgainElement.style.animation = 'fade-out 1s both';
-    resultElement.style.animation = 'fade-out 1s both';
+    playAgainElement.style.animation = 'fade-out 0.5s both';
+    resultElement.style.animation = 'fade-out 0.5s both';
     for (let i = 0; i < answersElement.children.length; i ++) {
         answersElement.children[i].style = "";
     }
@@ -194,9 +194,9 @@ function restart() {
         questionContainerElement.style.removeProperty("display");
         smallprintElement.style.removeProperty("display");
         answersElement.style.removeProperty("display");
-        questionElement.style.animation = 'fade-in 1s both';
-        smallprintElement.style.animation = 'fade-in 1s both';
-        answersElement.style.animation = 'fade-in 1s both';
+        questionElement.style.animation = 'fade-in 0.5s both';
+        smallprintElement.style.animation = 'fade-in 0.5s both';
+        answersElement.style.animation = 'fade-in 0.5s both';
     }, 750);
 }
 
