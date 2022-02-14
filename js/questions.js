@@ -1871,7 +1871,7 @@ var questions = [
         "name": "Alex's Toolbox",
         "rarity": "Very Rare",
         "charges": {
-          "value": 16,
+          "value": 24,
           "variance": 4
         },
         "repair": {
