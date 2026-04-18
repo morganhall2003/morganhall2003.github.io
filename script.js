@@ -1,8 +1,44 @@
 // Pokemon API Util
 const POKE_API = 'https://pokeapi.co/api/v2';
 let allAvailableMoves = []; // Store all moves in the game
+let moveAttributes = {}; // Store the category and type of all moves in the game
 
 let hints = false;
+
+// Use this to create a JSON file with the category and type of every move in the game
+async function writeMoveData() {
+    let allMoves = {};
+    let url = `${POKE_API}/move?limit=10000`; // Fetch up to 10000 moves
+    
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Failed to fetch moves');
+    
+    const data = await response.json();
+
+    for (const moveData of data.results) {
+        // Get the most recent learn method from version_group_details
+        console.log(`${POKE_API}/move/${moveData.name}`);
+        const response = await fetch(`${POKE_API}/move/${moveData.name}`);
+        const moveActualData = await response.json();
+        const category = moveActualData.damage_class.name;
+        const type = moveActualData.type.name;
+
+        allMoves[moveData.name] = { category: category, type: type };
+    }
+
+    const jsonString = JSON.stringify(allMoves, null, 2);
+
+    // Create a blob and download it
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const blobUrl = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = blobUrl;
+    a.download = 'moves.json';
+    a.click();
+
+    URL.revokeObjectURL(url);
+}
 
 // Helper function to convert text to title case
 function toTitleCase(str) {
@@ -18,7 +54,7 @@ function init() {
     // Setup function - called when page loads
     console.log('Initializing application');
     
-    // Fetch all moves from the API
+    // Fetch all moves from the API and move-attributes.json
     fetchAllMoves();
     
     const randomBtn = document.getElementById('randomBtn');
@@ -31,7 +67,7 @@ function init() {
     hintBtn.addEventListener('click', showHints);
 }
 
-// Fetch all moves from the PokeAPI
+// Fetch all moves from the PokeAPI and move-attributes.json
 async function fetchAllMoves() {
     try {
         let allMoves = [];
@@ -48,7 +84,17 @@ async function fetchAllMoves() {
         });
         
         allAvailableMoves = allMoves.sort();
+
         console.log(`Loaded ${allAvailableMoves.length} moves`);
+
+        const jsonResponse = await fetch('move-attributes.json')
+        if (!jsonResponse.ok) {
+            throw new Error('Failed to load move-attributes.json');
+        }
+
+        moveAttributes = await jsonResponse.json();
+
+        console.log(`Loaded ${Object.keys(moveAttributes).length} move attributes`);
     } catch (error) {
         console.error('Error fetching moves:', error);
     }
@@ -110,11 +156,11 @@ async function displayPokemon(pokemon) {
     for (const moveData of pokemon.moves) {
         // Get the most recent learn method from version_group_details
         if (moveData.version_group_details && moveData.version_group_details.length > 0) {
-            console.log(`${POKE_API}/move/${moveData.move.name}`);
-            const response = await fetch(`${POKE_API}/move/${moveData.move.name}`);
-            const moveActualData = await response.json();
-            const category = moveActualData.damage_class.name;
-            const type = moveActualData.type.name;
+            // console.log(`${POKE_API}/move/${moveData.move.name}`);
+            // const response = await fetch(`${POKE_API}/move/${moveData.move.name}`);
+            // const moveActualData = await response.json();
+            const category = moveAttributes[moveData.move.name] ? moveAttributes[moveData.move.name].category : 'unknown';
+            const type = moveAttributes[moveData.move.name] ? moveAttributes[moveData.move.name].type : 'unknown';
             moveData.version_group_details.forEach(detail => {
                 if (detail.version_group.name == "scarlet-violet") {
                     const method = detail.move_learn_method.name;
